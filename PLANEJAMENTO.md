@@ -1,49 +1,49 @@
-# 📚 PLANEJAMENTO DO PROJETO TASKFLOW
+﻿# ðŸ“š PLANEJAMENTO DO PROJETO TASKFLOW
 
-## 🎯 PAPEL
-Desenvolvimento de projeto acadêmico em React Native com Expo e professor universitário de ADS.
+## ðŸŽ¯ PAPEL
+Desenvolvimento de projeto acadÃªmico em React Native com Expo e professor universitÃ¡rio de ADS.
 
 ---
 
-## 📱 CONTEXTO DO PROJETO
+## ðŸ“± CONTEXTO DO PROJETO
 
 **Nome:** TaskFlow
 
-**Descrição:** Aplicativo para gerenciamento de tarefas acadêmicas e pessoais.
+**DescriÃ§Ã£o:** Aplicativo para gerenciamento de tarefas acadÃªmicas e pessoais.
 
-**Objetivo:** Permitir cadastro de usuários, cadastro de tarefas, visualização e acompanhamento das atividades.
+**Objetivo:** Permitir cadastro de usuÃ¡rios, cadastro de tarefas, visualizaÃ§Ã£o e acompanhamento das atividades.
 
 **Tecnologia:** React Native com Expo
 
 ---
 
-## ✅ REQUISITOS OBRIGATÓRIOS
+## âœ… REQUISITOS OBRIGATÃ“RIOS
 
 ### Quantidade de Telas
-- ✔ Mínimo de 4 telas
-- ✔ 1 tela obrigatória de cadastro de usuários
-- ✔ 3 telas adicionais
+- âœ” MÃ­nimo de 4 telas
+- âœ” 1 tela obrigatÃ³ria de cadastro de usuÃ¡rios
+- âœ” 3 telas adicionais
 
-### Recursos Técnicos
-- ✔ Navegação Drawer Navigator customizada
-- ✔ Context API
-- ✔ createContext
-- ✔ useContext
-- ✔ Comunicação direta utilizando Props
-- ✔ Comunicação indireta utilizando Context
-- ✔ FlatList
-- ✔ Picker para filtros
-- ✔ API REST (GET e POST)
-- ✔ Componentização
-- ✔ Estrutura organizada por pastas
-- ✔ Compatível com Expo
-- ✔ Tratamento básico de erros
+### Recursos TÃ©cnicos
+- âœ” NavegaÃ§Ã£o Drawer Navigator customizada
+- âœ” Context API
+- âœ” createContext
+- âœ” useContext
+- âœ” ComunicaÃ§Ã£o direta utilizando Props
+- âœ” ComunicaÃ§Ã£o indireta utilizando Context
+- âœ” FlatList
+- âœ” Picker para filtros
+- âœ” API REST (GET e POST)
+- âœ” ComponentizaÃ§Ã£o
+- âœ” Estrutura organizada por pastas
+- âœ” CompatÃ­vel com Expo
+- âœ” Tratamento bÃ¡sico de erros
 
 ---
 
-## 📋 TELAS DO APLICATIVO
+## ðŸ“‹ TELAS DO APLICATIVO
 
-### 1️⃣ TELA DE CADASTRO DE USUÁRIO
+### 1ï¸âƒ£ TELA DE CADASTRO DE USUÃRIO
 
 **Campos:**
 - Nome
@@ -52,56 +52,56 @@ Desenvolvimento de projeto acadêmico em React Native com Expo e professor unive
 - Senha
 - Confirmar Senha
 
-**Validações:**
-- Todos os campos obrigatórios
-- Email válido
-- Senha mínima de 6 caracteres
-- Confirmar senha igual à senha
+**ValidaÃ§Ãµes:**
+- Todos os campos obrigatÃ³rios
+- Email vÃ¡lido
+- Senha mÃ­nima de 6 caracteres
+- Confirmar senha igual Ã  senha
 
-**Ações:**
-- Botão "Cadastrar"
+**AÃ§Ãµes:**
+- BotÃ£o "Cadastrar"
 - POST na API
 
 ---
 
-### 2️⃣ TELA DE DASHBOARD
+### 2ï¸âƒ£ TELA DE DASHBOARD
 
-**Exibição:**
+**ExibiÃ§Ã£o:**
 - Total de tarefas
 - Tarefas pendentes
-- Tarefas concluídas
+- Tarefas concluÃ­das
 
 **Consumo de Dados:**
 - GET da API
 
 ---
 
-### 3️⃣ TELA DE NOVA TAREFA
+### 3ï¸âƒ£ TELA DE NOVA TAREFA
 
 **Campos:**
-- Título
-- Descrição
+- TÃ­tulo
+- DescriÃ§Ã£o
 - Categoria
 - Status
 
-**Categorias Disponíveis:**
+**Categorias DisponÃ­veis:**
 - Faculdade
 - Trabalho
 - Pessoal
 
-**Status Disponíveis:**
+**Status DisponÃ­veis:**
 - Pendente
-- Concluído
+- ConcluÃ­do
 
-**Ações:**
-- Botão "Salvar"
+**AÃ§Ãµes:**
+- BotÃ£o "Salvar"
 - POST na API
 
 ---
 
-### 4️⃣ TELA DE LISTA DE TAREFAS
+### 4ï¸âƒ£ TELA DE LISTA DE TAREFAS
 
-**Exibição:**
+**ExibiÃ§Ã£o:**
 - FlatList com tarefas
 
 **Filtros com Picker:**
@@ -115,106 +115,106 @@ Desenvolvimento de projeto acadêmico em React Native com Expo e professor unive
 
 ---
 
-## 🧩 COMPONENTES REUTILIZÁVEIS
+## ðŸ§© COMPONENTES REUTILIZÃVEIS
 
 Cada componente possui:
-- `index.js` - Lógica do componente
+- `index.js` - LÃ³gica do componente
 - `styles.js` - Estilos
 
 ### Componentes
 
 1. **InputField** - Campo de entrada customizado
-2. **CustomButton** - Botão reutilizável
-3. **TaskCard** - Card para exibição de tarefa
-4. **Header** - Cabeçalho das telas
+2. **CustomButton** - BotÃ£o reutilizÃ¡vel
+3. **TaskCard** - Card para exibiÃ§Ã£o de tarefa
+4. **Header** - CabeÃ§alho das telas
 
 ---
 
-## 🏗️ ESTRUTURA DE PASTAS
+## ðŸ—ï¸ ESTRUTURA DE PASTAS
 
 ```
 TaskFlow/
-│
-├── assets/
-│   ├── images/
-│   └── colors.js
-│
-├── components/
-│   ├── InputField/
-│   │   ├── index.js
-│   │   └── styles.js
-│   ├── CustomButton/
-│   │   ├── index.js
-│   │   └── styles.js
-│   ├── TaskCard/
-│   │   ├── index.js
-│   │   └── styles.js
-│   └── Header/
-│       ├── index.js
-│       └── styles.js
-│
-├── screens/
-│   ├── CadastroScreen/
-│   │   ├── index.js
-│   │   └── styles.js
-│   ├── DashboardScreen/
-│   │   ├── index.js
-│   │   └── styles.js
-│   ├── NovaTarefaScreen/
-│   │   ├── index.js
-│   │   └── styles.js
-│   └── ListaTarefasScreen/
-│       ├── index.js
-│       └── styles.js
-│
-├── navigation/
-│   ├── DrawerRoutes.js
-│   └── DrawerContent.js
-│
-├── context/
-│   ├── UserContext.js
-│   └── UserProvider.js
-│
-├── services/
-│   └── api.js
-│
-├── utils/
-│   ├── validations.js
-│   └── constants.js
-│
-├── App.js
-├── app.json
-├── package.json
-└── .gitignore
+â”‚
+â”œâ”€â”€ assets/
+â”‚   â”œâ”€â”€ images/
+â”‚   â””â”€â”€ colors.js
+â”‚
+â”œâ”€â”€ components/
+â”‚   â”œâ”€â”€ InputField/
+â”‚   â”‚   â”œâ”€â”€ index.js
+â”‚   â”‚   â””â”€â”€ styles.js
+â”‚   â”œâ”€â”€ CustomButton/
+â”‚   â”‚   â”œâ”€â”€ index.js
+â”‚   â”‚   â””â”€â”€ styles.js
+â”‚   â”œâ”€â”€ TaskCard/
+â”‚   â”‚   â”œâ”€â”€ index.js
+â”‚   â”‚   â””â”€â”€ styles.js
+â”‚   â””â”€â”€ Header/
+â”‚       â”œâ”€â”€ index.js
+â”‚       â””â”€â”€ styles.js
+â”‚
+â”œâ”€â”€ screens/
+â”‚   â”œâ”€â”€ CadastroScreen/
+â”‚   â”‚   â”œâ”€â”€ index.js
+â”‚   â”‚   â””â”€â”€ styles.js
+â”‚   â”œâ”€â”€ DashboardScreen/
+â”‚   â”‚   â”œâ”€â”€ index.js
+â”‚   â”‚   â””â”€â”€ styles.js
+â”‚   â”œâ”€â”€ NovaTarefaScreen/
+â”‚   â”‚   â”œâ”€â”€ index.js
+â”‚   â”‚   â””â”€â”€ styles.js
+â”‚   â””â”€â”€ ListaTarefasScreen/
+â”‚       â”œâ”€â”€ index.js
+â”‚       â””â”€â”€ styles.js
+â”‚
+â”œâ”€â”€ navigation/
+â”‚   â”œâ”€â”€ DrawerRoutes.js
+â”‚   â””â”€â”€ DrawerContent.js
+â”‚
+â”œâ”€â”€ context/
+â”‚   â”œâ”€â”€ UserContext.js
+â”‚   â””â”€â”€ UserProvider.js
+â”‚
+â”œâ”€â”€ services/
+â”‚   â””â”€â”€ api.js
+â”‚
+â”œâ”€â”€ utils/
+â”‚   â”œâ”€â”€ validations.js
+â”‚   â””â”€â”€ constants.js
+â”‚
+â”œâ”€â”€ App.js
+â”œâ”€â”€ app.json
+â”œâ”€â”€ package.json
+â””â”€â”€ .gitignore
 ```
 
 ---
 
-## 📦 DEPENDÊNCIAS NECESSÁRIAS
+## ðŸ“¦ DEPENDÃŠNCIAS NECESSÃRIAS
 
-### Dependências Principais
+### DependÃªncias Principais
 
-| Dependência | Versão | Propósito |
+| DependÃªncia | VersÃ£o | PropÃ³sito |
 |---|---|---|
 | `react` | ^18.0 | Biblioteca base |
 | `react-native` | 0.73+ | Framework mobile |
 | `expo` | ~50.0 | Plataforma Expo |
-| `@react-navigation/native` | ^6.0 | Navegação base |
+| `@react-navigation/native` | ^6.0 | NavegaÃ§Ã£o base |
 | `@react-navigation/drawer` | ^6.0 | Drawer Navigator |
-| `react-native-gesture-handler` | ~2.0 | Gestos (necessário para drawer) |
-| `react-native-reanimated` | ~3.0 | Animações drawer |
-| `react-native-screens` | ~3.0 | Otimização de navegação |
-| `react-native-safe-area-context` | ~4.0 | Área segura da tela |
+| `react-native-gesture-handler` | ~2.0 | Gestos (necessÃ¡rio para drawer) |
+| `react-native-reanimated` | ~3.0 | AnimaÃ§Ãµes drawer |
+| `react-native-screens` | ~3.0 | OtimizaÃ§Ã£o de navegaÃ§Ã£o |
+| `react-native-safe-area-context` | ~4.0 | Ãrea segura da tela |
 | `react-native-community/picker` | ^1.0 | Picker component |
-| `axios` | ^1.0 | Requisições HTTP |
+| `axios` | ^1.0 | RequisiÃ§Ãµes HTTP |
 | `expo-constants` | ~15.0 | Constantes do Expo |
 
-### Dependências de Desenvolvimento
+### DependÃªncias de Desenvolvimento
 - `@types/react-native` - Type hints (opcional)
 
 ---
 
-## 🎨 PALETA DE CORES
+## ðŸŽ¨ PALETA DE CORES
 
 ```javascript
 // assets/colors.js
@@ -232,7 +232,7 @@ export const COLORS = {
 
 ---
 
-## 📡 ESTRUTURA DA API (MockAPI)
+## ðŸ“¡ ESTRUTURA DA API (MockAPI)
 
 ### Recurso: usuario
 
@@ -240,9 +240,9 @@ export const COLORS = {
 ```json
 {
   "id": "1",
-  "nome": "João Silva",
+  "nome": "JoÃ£o Silva",
   "email": "joao@example.com",
-  "curso": "Análise e Desenvolvimento de Sistemas",
+  "curso": "AnÃ¡lise e Desenvolvimento de Sistemas",
   "senha": "hash_da_senha"
 }
 ```
@@ -254,7 +254,7 @@ export const COLORS = {
 {
   "id": "1",
   "titulo": "Fazer trabalho de BD",
-  "descricao": "Trabalho sobre normalização",
+  "descricao": "Trabalho sobre normalizaÃ§Ã£o",
   "categoria": "Faculdade",
   "status": "Pendente"
 }
@@ -262,45 +262,45 @@ export const COLORS = {
 
 ---
 
-## 🔑 FLUXO DE DADOS
+## ðŸ”‘ FLUXO DE DADOS
 
 ```
-┌─────────────────────────────────────────┐
-│         UserContext (Provider)          │
-│  - Usuário logado                       │
-│  - setUser (ação)                       │
-└─────────────────────────────────────────┘
-           ↓ (useContext)
-┌─────────────────────────────────────────┐
-│          Todas as Telas                 │
-│  - CadastroScreen (POST usuário)        │
-│  - DashboardScreen (GET estatísticas)   │
-│  - NovaTarefaScreen (POST tarefa)       │
-│  - ListaTarefasScreen (GET tarefas)     │
-└─────────────────────────────────────────┘
-           ↓ (axios)
-┌─────────────────────────────────────────┐
-│         MockAPI (REST API)              │
-│  - /usuario (GET, POST)                 │
-│  - /tarefas (GET, POST)                 │
-└─────────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚         UserContext (Provider)          â”‚
+â”‚  - UsuÃ¡rio logado                       â”‚
+â”‚  - setUser (aÃ§Ã£o)                       â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+           â†“ (useContext)
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚          Todas as Telas                 â”‚
+â”‚  - CadastroScreen (POST usuÃ¡rio)        â”‚
+â”‚  - DashboardScreen (GET estatÃ­sticas)   â”‚
+â”‚  - NovaTarefaScreen (POST tarefa)       â”‚
+â”‚  - ListaTarefasScreen (GET tarefas)     â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+           â†“ (axios)
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚         MockAPI (REST API)              â”‚
+â”‚  - /usuario (GET, POST)                 â”‚
+â”‚  - /tarefas (GET, POST)                 â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
 ---
 
-## 🚀 PROCESSO DE DESENVOLVIMENTO
+## ðŸš€ PROCESSO DE DESENVOLVIMENTO
 
-### ETAPA 1: ✅ CONCLUÍDA
-- Análise de requisitos
-- Criação da arquitetura
+### ETAPA 1: âœ… CONCLUÃDA
+- AnÃ¡lise de requisitos
+- CriaÃ§Ã£o da arquitetura
 - Estrutura de pastas
-- Listagem de dependências
+- Listagem de dependÃªncias
 
-### ETAPA 2: ✅ CONCLUÍDA
-- Gerar comandos de instalação
-- Explicar cada dependência
+### ETAPA 2: âœ… CONCLUÃDA
+- Gerar comandos de instalaÃ§Ã£o
+- Explicar cada dependÃªncia
 
-**Comandos de instalação:**
+**Comandos de instalaÃ§Ã£o:**
 ```bash
 npm install
 npx expo install --fix
@@ -308,81 +308,81 @@ npx expo install react-native-worklets
 npm start
 ```
 
-### ETAPA 3: ✅ CONCLUÍDA
-- Criar navegação Drawer
+### ETAPA 3: âœ… CONCLUÃDA
+- Criar navegaÃ§Ã£o Drawer
 
-### ETAPA 4: ✅ CONCLUÍDA
+### ETAPA 4: âœ… CONCLUÃDA
 - Criar Context API
 
-### ETAPA 5: ✅ CONCLUÍDA
-- Criar componentes reutilizáveis
+### ETAPA 5: âœ… CONCLUÃDA
+- Criar componentes reutilizÃ¡veis
 
-### ETAPA 6: ✅ CONCLUÍDA
+### ETAPA 6: âœ… CONCLUÃDA
 - Criar tela Cadastro
 
-### ETAPA 7: ✅ CONCLUÍDA
+### ETAPA 7: âœ… CONCLUÃDA
 - Criar tela Nova Tarefa
 
-### ETAPA 8: ✅ CONCLUÍDA
+### ETAPA 8: âœ… CONCLUÃDA
 - Criar tela Lista de Tarefas
 
-### ETAPA 9: ✅ CONCLUÍDA
+### ETAPA 9: âœ… CONCLUÃDA
 - Criar Dashboard
 
-### ETAPA 10: ✅ CONCLUÍDA
-- Criar integração com MockAPI
+### ETAPA 10: âœ… CONCLUÃDA
+- Criar integraÃ§Ã£o com MockAPI
 
-### ETAPA 11: ✅ CONCLUÍDA (código)
-- Revisão completa
-- Verificação de requisitos
+### ETAPA 11: âœ… CONCLUÃDA (cÃ³digo)
+- RevisÃ£o completa
+- VerificaÃ§Ã£o de requisitos
 - Checklist final
 
 ---
 
-## 📌 ANOTAÇÕES IMPORTANTES
+## ðŸ“Œ ANOTAÃ‡Ã•ES IMPORTANTES
 
 - Projeto simples e organizado
-- Compatível com Expo
+- CompatÃ­vel com Expo
 - Apenas bibliotecas solicitadas
-- Tratamento básico de erros
+- Tratamento bÃ¡sico de erros
 - Componentes bem estruturados
 - Context API para gerenciamento de estado
-- Props para comunicação entre componentes
+- Props para comunicaÃ§Ã£o entre componentes
 
-## ✅ CHECKLIST DE VALIDAÇÃO FINAL
+## âœ… CHECKLIST DE VALIDAÃ‡ÃƒO FINAL
 
 ### Requisitos da Atividade
 
 * [x] Aplicativo criado com React Native + Expo
-* [x] Compatível com Snack Expo
-* [x] Mínimo de 4 telas
-* [x] Tela obrigatória de Cadastro de Usuário
+* [x] CompatÃ­vel com Snack Expo
+* [x] MÃ­nimo de 4 telas
+* [x] Tela obrigatÃ³ria de Cadastro de UsuÃ¡rio
 * [x] 3 telas adicionais personalizadas
 * [x] Drawer Navigator Customizado
 * [x] Uso de createContext
 * [x] Uso de useContext
-* [x] Comunicação direta via Props
-* [x] Comunicação indireta via Context API
+* [x] ComunicaÃ§Ã£o direta via Props
+* [x] ComunicaÃ§Ã£o indireta via Context API
 * [x] FlatList implementada
 * [x] Picker implementado para filtros
 * [x] API REST com GET
 * [x] API REST com POST
-* [x] Componentização aplicada
-* [x] Tratamento básico de erros
+* [x] ComponentizaÃ§Ã£o aplicada
+* [x] Tratamento bÃ¡sico de erros
 * [x] Projeto organizado por pastas
-* [ ] Protótipo criado no Figma
+* [ ] ProtÃ³tipo criado no Figma
 * [ ] Documento PDF/Word criado
-* [ ] Vídeo de demonstração gravado
+* [ ] VÃ­deo de demonstraÃ§Ã£o gravado
 * [ ] Projeto exportado para Snack Expo
 
-## 🌐 CONFIGURAÇÃO DA MOCKAPI
+## ðŸŒ CONFIGURAÃ‡ÃƒO DA MOCKAPI
 
-Será utilizada a plataforma MockAPI para simular um backend REST.
+SerÃ¡ utilizada a plataforma MockAPI para simular um backend REST.
 
 ENDPOINT DA API: 
 https:// 6a2544ef5447714a6f834da2 .mockapi.io /taskflow/api / :endpoint
 
-Recursos que já foram criados:
+Recursos que jÃ¡ foram criados:
 
 ### usuario
 
@@ -414,35 +414,35 @@ Endpoints utilizados:
 * GET /tarefas
 * POST /tarefas
 
-A integração será realizada através do Axios utilizando o arquivo:
+A integraÃ§Ã£o serÃ¡ realizada atravÃ©s do Axios utilizando o arquivo:
 
 services/api.js
 
 Objetivo:
 
-Permitir armazenamento e recuperação de dados de usuários e tarefas simulando um backend real.
+Permitir armazenamento e recuperaÃ§Ã£o de dados de usuÃ¡rios e tarefas simulando um backend real.
 
-Toda comunicação com a API deverá ser realizada através do Axios.
+Toda comunicaÃ§Ã£o com a API deverÃ¡ ser realizada atravÃ©s do Axios.
 
-## 📱 COMPATIBILIDADE COM SNACK EXPO
+## ðŸ“± COMPATIBILIDADE COM SNACK EXPO
 
-O projeto deverá ser desenvolvido de forma compatível com o Snack Expo.
+O projeto deverÃ¡ ser desenvolvido de forma compatÃ­vel com o Snack Expo.
 
-Evitar bibliotecas que não funcionem corretamente no Snack.
+Evitar bibliotecas que nÃ£o funcionem corretamente no Snack.
 
-Ao final do desenvolvimento deverá ser gerado:
+Ao final do desenvolvimento deverÃ¡ ser gerado:
 
-* Link público do Snack
+* Link pÃºblico do Snack
 * Arquivo ZIP do projeto
-* Vídeo de demonstração
+* VÃ­deo de demonstraÃ§Ã£o
 * Documento PDF/Word com prints das telas
 
 ## AVISO IMPORTANTE
 
-IMPORTANTE: As versões serão mantidas conforme as versões instaladas automaticamente pelo Expo SDK 54
+IMPORTANTE: As versÃµes serÃ£o mantidas conforme as versÃµes instaladas automaticamente pelo Expo SDK 54
 
 
 ---
 
 **Documento criado em:** 30 de Maio de 2026  
-**Status:** Planejamento Aprovado ✅
+**Status:** Planejamento Aprovado âœ…

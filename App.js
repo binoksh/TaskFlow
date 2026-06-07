@@ -1,11 +1,13 @@
+import 'react-native-gesture-handler';
+import 'react-native-reanimated';
 import React from 'react';
 import { Platform, StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { enableScreens } from 'react-native-screens';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import AppNavigator from './navigation/AppNavigator';
 import { UserProvider } from './context/UserProvider';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 if (Platform.OS === 'web') {
   enableScreens(false);
