@@ -4,9 +4,9 @@ import { COLORS } from '../../assets/colors';
 export default StyleSheet.create({
   card: {
     backgroundColor: COLORS.white,
-    padding: 14,
+    padding: 12,
     borderRadius: 10,
-    marginBottom: 12,
+    marginBottom: 8,
     borderWidth: 1,
     borderColor: COLORS.lightGray,
     elevation: 1,

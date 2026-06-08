@@ -3,12 +3,12 @@ import { COLORS } from '../../assets/colors';
 
 export default StyleSheet.create({
   container: {
-    marginBottom: 10,
+    marginBottom: 8,
   },
   label: {
-    marginBottom: 4,
+    marginBottom: 3,
     color: COLORS.text,
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: '600',
   },
   required: {
@@ -17,11 +17,11 @@ export default StyleSheet.create({
   input: {
     borderWidth: 1,
     borderColor: COLORS.lightGray,
-    paddingVertical: 10,
+    paddingVertical: 8,
     paddingHorizontal: 12,
     borderRadius: 8,
     backgroundColor: COLORS.white,
-    fontSize: 15,
+    fontSize: 14,
     color: COLORS.text,
   },
   inputError: {

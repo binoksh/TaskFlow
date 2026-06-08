@@ -8,61 +8,87 @@ export default function DrawerContent(props) {
   const { user, logout } = useContext(UserContext);
 
   return (
-    <DrawerContentScrollView {...props} contentContainerStyle={styles.scroll}>
-      <View style={styles.header}>
-        <Text style={styles.title}>TaskFlow</Text>
-        <Text style={styles.subtitle}>Gerenciador de Tarefas</Text>
-        {user ? (
-          <>
-            <Text style={styles.user}>Olá, {user.nome}</Text>
-            <Text style={styles.curso}>{user.curso}</Text>
-          </>
-        ) : null}
-      </View>
-      <DrawerItemList {...props} />
-      <TouchableOpacity style={styles.logoutButton} onPress={logout}>
-        <Text style={styles.logoutText}>Sair da conta</Text>
+    <View style={styles.wrapper}>
+      <DrawerContentScrollView
+        {...props}
+        contentContainerStyle={styles.scroll}
+        style={styles.scrollView}
+      >
+        <View style={styles.header}>
+          <Text style={styles.title} numberOfLines={1}>TaskFlow</Text>
+          <Text style={styles.subtitle} numberOfLines={1}>Gerenciador de Tarefas</Text>
+          {user ? (
+            <View style={styles.userBox}>
+              <Text style={styles.user} numberOfLines={1}>Olá, {user.nome}</Text>
+              <Text style={styles.curso} numberOfLines={1}>{user.curso}</Text>
+            </View>
+          ) : null}
+        </View>
+        <View style={styles.menu}>
+          <DrawerItemList {...props} />
+        </View>
+      </DrawerContentScrollView>
+
+      <TouchableOpacity style={styles.logoutButton} onPress={logout} activeOpacity={0.8}>
+        <Text style={styles.logoutText}>Sair</Text>
       </TouchableOpacity>
-    </DrawerContentScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  scroll: {
+  wrapper: {
     flex: 1,
     backgroundColor: COLORS.white,
   },
+  scrollView: {
+    flex: 1,
+  },
+  scroll: {
+    paddingBottom: 8,
+  },
   header: {
-    padding: 20,
+    paddingHorizontal: 16,
+    paddingVertical: 16,
     backgroundColor: COLORS.primary,
-    marginBottom: 8,
+    marginBottom: 6,
   },
   title: {
-    fontSize: 22,
+    fontSize: 18,
     fontWeight: '700',
     color: COLORS.white,
   },
   subtitle: {
-    fontSize: 13,
+    fontSize: 11,
     color: COLORS.white,
     opacity: 0.85,
-    marginTop: 4,
+    marginTop: 2,
+  },
+  userBox: {
+    marginTop: 10,
+    paddingTop: 10,
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(255,255,255,0.25)',
   },
   user: {
-    fontSize: 14,
+    fontSize: 13,
     color: COLORS.white,
-    marginTop: 12,
     fontWeight: '600',
   },
   curso: {
-    fontSize: 12,
+    fontSize: 11,
     color: COLORS.white,
-    opacity: 0.85,
-    marginTop: 4,
+    opacity: 0.8,
+    marginTop: 2,
+  },
+  menu: {
+    paddingTop: 4,
   },
   logoutButton: {
-    margin: 16,
-    padding: 12,
+    marginHorizontal: 12,
+    marginBottom: 14,
+    marginTop: 6,
+    paddingVertical: 10,
     borderRadius: 8,
     borderWidth: 1,
     borderColor: COLORS.error,
@@ -70,6 +96,7 @@ const styles = StyleSheet.create({
   },
   logoutText: {
     color: COLORS.error,
-    fontWeight: '700',
+    fontWeight: '600',
+    fontSize: 13,
   },
 });

@@ -7,12 +7,13 @@ import styles from './styles';
 import { getTarefas } from '../../services/api';
 import { COLORS } from '../../assets/colors';
 import { UserContext } from '../../context/UserContext';
-import { getErrorMessage } from '../../utils/errorHandler';
+import { getErrorMessage } from '../../utils/validations';
 import { useCompactLayout } from '../../utils/layout';
 
 export default function DashboardScreen() {
   const { user } = useContext(UserContext);
-  const { isWide } = useCompactLayout();
+  const { isWide, isWeb } = useCompactLayout();
+  const useRowCards = isWeb && isWide;
   const [stats, setStats] = useState({ total: 0, pendentes: 0, concluidas: 0 });
   const [loading, setLoading] = useState(true);
   const [erro, setErro] = useState(null);
@@ -49,16 +50,16 @@ export default function DashboardScreen() {
       ) : erro ? (
         <Text style={styles.erro}>{erro}</Text>
       ) : (
-        <View style={[styles.cards, isWide && styles.cardsRow]}>
-          <View style={[styles.card, styles.cardTotal]}>
+        <View style={[styles.cards, useRowCards && styles.cardsRow]}>
+          <View style={[styles.card, useRowCards && styles.cardRow, styles.cardTotal]}>
             <Text style={styles.cardValue}>{stats.total}</Text>
             <Text style={styles.cardLabel}>Total</Text>
           </View>
-          <View style={[styles.card, styles.cardPending]}>
+          <View style={[styles.card, useRowCards && styles.cardRow, styles.cardPending]}>
             <Text style={styles.cardValue}>{stats.pendentes}</Text>
             <Text style={styles.cardLabel}>Pendentes</Text>
           </View>
-          <View style={[styles.card, styles.cardDone]}>
+          <View style={[styles.card, useRowCards && styles.cardRow, styles.cardDone]}>
             <Text style={styles.cardValue}>{stats.concluidas}</Text>
             <Text style={styles.cardLabel}>Concluídas</Text>
           </View>

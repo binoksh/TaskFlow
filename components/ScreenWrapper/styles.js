@@ -21,8 +21,14 @@ export default StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 24,
   },
+  centeredScroll: {
+    justifyContent: 'center',
+  },
   inner: {
     width: '100%',
     flex: 1,
+  },
+  innerCentered: {
+    width: '100%',
   },
 });

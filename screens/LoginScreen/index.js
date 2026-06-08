@@ -1,23 +1,21 @@
 import React, { useState, useContext } from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Alert, Text, TouchableOpacity, View } from 'react-native';
 import InputField from '../../components/InputField';
 import CustomButton from '../../components/CustomButton';
 import ScreenWrapper from '../../components/ScreenWrapper';
 import styles from './styles';
 import { loginUsuario } from '../../services/api';
 import { UserContext } from '../../context/UserContext';
-import { validateLoginFields } from '../../utils/validations';
+import { validateLoginFields, getErrorMessage } from '../../utils/validations';
 
 export default function LoginScreen({ navigation }) {
   const { setUser } = useContext(UserContext);
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [errors, setErrors] = useState({});
-  const [apiError, setApiError] = useState('');
   const [loading, setLoading] = useState(false);
 
   const limparErro = (campo) => {
-    setApiError('');
     if (errors[campo]) {
       setErrors((prev) => {
         const next = { ...prev };
@@ -27,7 +25,7 @@ export default function LoginScreen({ navigation }) {
     }
   };
 
-  const handleLogin = async () => {
+  const handleEntrar = async () => {
     const resultado = validateLoginFields({ email, senha });
     if (!resultado.isValid) {
       setErrors(resultado.errors);
@@ -36,24 +34,29 @@ export default function LoginScreen({ navigation }) {
 
     setLoading(true);
     setErrors({});
-    setApiError('');
     try {
       const usuario = await loginUsuario(email.trim(), senha);
       setUser(usuario);
     } catch (err) {
-      setApiError('E-mail ou senha incorretos. Verifique e tente novamente.');
+      const mensagem = err.code === 'AUTH_FAILED'
+        ? err.message
+        : getErrorMessage(err, 'Não foi possível fazer login.');
+      Alert.alert('Erro', mensagem);
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <ScreenWrapper scroll variant="form">
+    <ScreenWrapper scroll variant="form" centered>
+      <View style={styles.header}>
+        <Text style={styles.logo}>TaskFlow</Text>
+        <Text style={styles.tagline}>Gerenciador de Tarefas</Text>
+      </View>
+
       <View style={styles.card}>
         <Text style={styles.title}>Entrar</Text>
-        <Text style={styles.subtitle}>Acesse sua conta no TaskFlow</Text>
-
-        {apiError ? <Text style={styles.apiError}>{apiError}</Text> : null}
+        <Text style={styles.subtitle}>Acesse com seu e-mail e senha</Text>
 
         <InputField
           label="E-mail"
@@ -70,18 +73,21 @@ export default function LoginScreen({ navigation }) {
           required
           value={senha}
           onChangeText={(v) => { setSenha(v); limparErro('senha'); }}
-          placeholder="Digite sua senha"
+          placeholder="Sua senha"
           secureTextEntry
           error={errors.senha}
         />
 
         <CustomButton
-          title={loading ? 'Entrando...' : 'Entrar na conta'}
-          onPress={handleLogin}
+          title={loading ? 'Entrando...' : 'Entrar'}
+          onPress={handleEntrar}
           disabled={loading}
         />
 
-        <TouchableOpacity onPress={() => navigation.navigate('Cadastro')} style={styles.link}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Cadastro')}
+          style={styles.link}
+        >
           <Text style={styles.linkText}>Não tem conta? Cadastre-se</Text>
         </TouchableOpacity>
       </View>

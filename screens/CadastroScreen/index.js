@@ -4,10 +4,9 @@ import InputField from '../../components/InputField';
 import CustomButton from '../../components/CustomButton';
 import ScreenWrapper from '../../components/ScreenWrapper';
 import styles from './styles';
-import { postUsuario, emailJaCadastrado } from '../../services/api';
+import { postUsuario } from '../../services/api';
 import { UserContext } from '../../context/UserContext';
-import { validateCadastroFields } from '../../utils/validations';
-import { getErrorMessage } from '../../utils/errorHandler';
+import { validateCadastroFields, getErrorMessage } from '../../utils/validations';
 
 export default function CadastroScreen({ navigation }) {
   const { setUser } = useContext(UserContext);
@@ -39,14 +38,15 @@ export default function CadastroScreen({ navigation }) {
     setLoading(true);
     setErrors({});
     try {
-      if (await emailJaCadastrado(email)) {
-        setErrors({ email: 'Este e-mail já está cadastrado' });
-        return;
-      }
-
       const payload = { nome: nome.trim(), email: email.trim(), curso: curso.trim(), senha };
       const usuario = await postUsuario(payload);
       setUser(usuario);
+      Alert.alert('Sucesso', 'Usuário cadastrado com sucesso!');
+      setNome('');
+      setEmail('');
+      setCurso('');
+      setSenha('');
+      setConfirmSenha('');
     } catch (err) {
       Alert.alert('Erro', getErrorMessage(err, 'Não foi possível cadastrar o usuário.'));
     } finally {
@@ -57,7 +57,7 @@ export default function CadastroScreen({ navigation }) {
   return (
     <ScreenWrapper scroll variant="form">
       <View style={styles.card}>
-        <Text style={styles.title}>Criar conta</Text>
+        <Text style={styles.title}>Cadastro de Usuário</Text>
         <Text style={styles.subtitle}>Preencha todos os campos obrigatórios (*)</Text>
 
         <InputField
@@ -113,7 +113,10 @@ export default function CadastroScreen({ navigation }) {
           disabled={loading}
         />
 
-        <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.link}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Login')}
+          style={styles.link}
+        >
           <Text style={styles.linkText}>Já tem conta? Entrar</Text>
         </TouchableOpacity>
       </View>

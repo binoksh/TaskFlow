@@ -8,8 +8,7 @@ import ScreenWrapper from '../../components/ScreenWrapper';
 import styles from './styles';
 import { postTarefa } from '../../services/api';
 import { CATEGORIAS, STATUS_TAREFA } from '../../utils/constants';
-import { validateTarefa } from '../../utils/validations';
-import { getErrorMessage } from '../../utils/errorHandler';
+import { validateTarefa, getErrorMessage } from '../../utils/validations';
 
 export default function NovaTarefaScreen() {
   const [titulo, setTitulo] = useState('');
@@ -67,7 +66,7 @@ export default function NovaTarefaScreen() {
             ))}
           </Picker>
         </View>
-        <CustomButton title={loading ? 'Salvando...' : 'Salvar tarefa'} onPress={handleSalvar} disabled={loading} />
+        <CustomButton title={loading ? 'Salvando...' : 'Salvar'} onPress={handleSalvar} disabled={loading} />
       </View>
     </ScreenWrapper>
   );

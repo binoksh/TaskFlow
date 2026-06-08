@@ -69,15 +69,22 @@ export function validateLoginFields({ email, senha }) {
   };
 }
 
-export function validateLogin(data) {
-  const { isValid, errors } = validateLoginFields(data);
-  if (isValid) return null;
-  return Object.values(errors)[0];
-}
-
 export function validateTarefa({ titulo, descricao }) {
   if (!titulo?.trim() || !descricao?.trim()) {
     return 'Preencha título e descrição';
   }
   return null;
+}
+
+export function getErrorMessage(error, mensagemPadrao) {
+  if (error?.response?.status === 404) {
+    return 'Recurso não encontrado na API.';
+  }
+  if (error?.response?.data?.message) {
+    return error.response.data.message;
+  }
+  if (error?.message === 'Network Error') {
+    return 'Sem conexão com a internet. Verifique sua rede.';
+  }
+  return mensagemPadrao;
 }

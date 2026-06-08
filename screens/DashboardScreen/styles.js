@@ -3,31 +3,36 @@ import { COLORS } from '../../assets/colors';
 
 export default StyleSheet.create({
   loader: {
-    marginTop: 32,
+    marginTop: 24,
   },
   erro: {
     color: COLORS.error,
     textAlign: 'center',
-    marginTop: 24,
+    marginTop: 20,
     paddingHorizontal: 16,
-    fontSize: 14,
+    fontSize: 13,
   },
   cards: {
     paddingHorizontal: 16,
-    gap: 10,
+    paddingBottom: 16,
   },
   cardsRow: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    gap: 8,
   },
   card: {
-    flex: 1,
-    minWidth: 140,
     backgroundColor: COLORS.white,
-    padding: 16,
+    padding: 14,
     borderRadius: 10,
     borderLeftWidth: 4,
-    marginBottom: 10,
+    marginBottom: 8,
+    alignSelf: 'stretch',
+  },
+  cardRow: {
+    flex: 1,
+    minWidth: 120,
+    marginBottom: 0,
   },
   cardTotal: {
     borderLeftColor: COLORS.secondary,
@@ -39,12 +44,12 @@ export default StyleSheet.create({
     borderLeftColor: COLORS.success,
   },
   cardValue: {
-    fontSize: 28,
+    fontSize: 24,
     fontWeight: '700',
     color: COLORS.primary,
   },
   cardLabel: {
-    fontSize: 13,
+    fontSize: 12,
     color: COLORS.text,
     marginTop: 2,
     opacity: 0.75,

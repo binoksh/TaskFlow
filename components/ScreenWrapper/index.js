@@ -3,12 +3,22 @@ import { View, ScrollView } from 'react-native';
 import { useCompactLayout } from '../../utils/layout';
 import styles from './styles';
 
-export default function ScreenWrapper({ children, scroll = false, variant = 'page' }) {
+export default function ScreenWrapper({
+  children,
+  scroll = false,
+  variant = 'page',
+  centered = false,
+}) {
   const { isWeb, formWidth, pageWidth } = useCompactLayout();
   const maxWidth = variant === 'form' ? formWidth : pageWidth;
 
   const content = (
-    <View style={[styles.inner, isWeb && maxWidth ? { maxWidth, width: '100%' } : null]}>
+    <View
+      style={[
+        centered ? styles.innerCentered : styles.inner,
+        isWeb && maxWidth ? { maxWidth, width: '100%' } : null,
+      ]}
+    >
       {children}
     </View>
   );
@@ -16,7 +26,11 @@ export default function ScreenWrapper({ children, scroll = false, variant = 'pag
   if (scroll) {
     return (
       <ScrollView
-        contentContainerStyle={[styles.scroll, isWeb && styles.webScroll]}
+        contentContainerStyle={[
+          styles.scroll,
+          isWeb && styles.webScroll,
+          centered && styles.centeredScroll,
+        ]}
         keyboardShouldPersistTaps="handled"
       >
         {content}

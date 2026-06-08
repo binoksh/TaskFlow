@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { View, Text, FlatList, ActivityIndicator, RefreshControl } from 'react-native';
+import { View, Text, FlatList, ActivityIndicator } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { Picker } from '@react-native-picker/picker';
 import TaskCard from '../../components/TaskCard';
@@ -9,18 +9,16 @@ import styles from './styles';
 import { getTarefas } from '../../services/api';
 import { COLORS } from '../../assets/colors';
 import { FILTROS_CATEGORIA } from '../../utils/constants';
-import { getErrorMessage } from '../../utils/errorHandler';
+import { getErrorMessage } from '../../utils/validations';
 
 export default function ListaTarefasScreen() {
   const [tarefas, setTarefas] = useState([]);
   const [filtro, setFiltro] = useState('Todos');
   const [loading, setLoading] = useState(true);
-  const [refreshing, setRefreshing] = useState(false);
   const [erro, setErro] = useState(null);
 
-  const fetchTarefas = useCallback(async (isRefresh = false) => {
-    if (isRefresh) setRefreshing(true);
-    else setLoading(true);
+  const fetchTarefas = useCallback(async () => {
+    setLoading(true);
     setErro(null);
     try {
       const data = await getTarefas();
@@ -29,7 +27,6 @@ export default function ListaTarefasScreen() {
       setErro(getErrorMessage(err, 'Não foi possível carregar as tarefas.'));
     } finally {
       setLoading(false);
-      setRefreshing(false);
     }
   }, []);
 
@@ -63,9 +60,6 @@ export default function ListaTarefasScreen() {
           keyExtractor={(item) => String(item.id)}
           renderItem={({ item }) => <TaskCard task={item} />}
           contentContainerStyle={styles.list}
-          refreshControl={
-            <RefreshControl refreshing={refreshing} onRefresh={() => fetchTarefas(true)} colors={[COLORS.primary]} />
-          }
           ListEmptyComponent={<Text style={styles.empty}>Nenhuma tarefa encontrada.</Text>}
         />
       )}

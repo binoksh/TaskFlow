@@ -17,12 +17,6 @@ export async function postUsuario(usuario) {
   return response.data;
 }
 
-export async function emailJaCadastrado(email) {
-  const usuarios = await getUsuarios();
-  const lista = Array.isArray(usuarios) ? usuarios : [];
-  return lista.some((u) => u.email?.toLowerCase() === email.trim().toLowerCase());
-}
-
 export async function loginUsuario(email, senha) {
   const usuarios = await getUsuarios();
   const lista = Array.isArray(usuarios) ? usuarios : [];
@@ -48,5 +42,3 @@ export async function postTarefa(tarefa) {
   const response = await api.post('/tarefas', tarefa);
   return response.data;
 }
-
-export default api;
