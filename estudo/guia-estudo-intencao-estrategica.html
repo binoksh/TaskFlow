@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Guia de Estudo — Intenção Estratégica (Hamel &amp; Prahalad, HBR 1989)</title>
+<style>
+/* ============ Páginas ============ */
+@page {
+  size: letter;
+  margin: 64pt 54pt 76pt 54pt;
+}
+@page cover {
+  margin: 40pt 54pt 60pt 54pt;
+}
+@page content {
+  margin-top: 78pt;
+  @top-center {
+    content: "Intenção Estratégica \2022  Guia de Estudo";
+    width: 100%;
+    text-align: right;
+    font-family: "Liberation Serif", serif;
+    font-size: 7.5pt;
+    font-weight: bold;
+    letter-spacing: 1.2pt;
+    font-variant: small-caps;
+    vertical-align: bottom;
+    padding-bottom: 4pt;
+    border-bottom: 2.2pt solid #000;
+    margin-bottom: 6pt;
+  }
+  @bottom-left {
+    content: "guia de estudo \2022  baseado em hamel & prahalad, harvard business review, 1989/2005";
+    width: 75%;
+    text-align: left;
+    font-family: "Liberation Serif", serif;
+    font-variant: small-caps;
+    letter-spacing: 0.6pt;
+    font-size: 6.5pt;
+    color: #222;
+    vertical-align: top;
+    padding-top: 4pt;
+    border-top: 0.7pt solid #000;
+    margin-top: 8pt;
+    margin-bottom: 24pt;
+  }
+  @bottom-right {
+    content: "página " counter(page);
+    width: 25%;
+    text-align: right;
+    font-family: "Liberation Serif", serif;
+    font-variant: small-caps;
+    letter-spacing: 0.6pt;
+    font-size: 6.5pt;
+    color: #222;
+    vertical-align: top;
+    padding-top: 4pt;
+    border-top: 0.7pt solid #000;
+    margin-top: 8pt;
+    margin-bottom: 24pt;
+  }
+}
+
+/* ============ Base ============ */
+body {
+  font-family: "Liberation Serif", "DejaVu Serif", serif;
+  font-size: 9.2pt;
+  line-height: 13pt;
+  color: #000;
+  margin: 0;
+}
+p { margin: 0 0 6pt 0; text-align: justify; hyphens: auto; }
+h2.section {
+  font-family: "Liberation Serif", serif;
+  font-size: 15pt;
+  font-weight: bold;
+  margin: 14pt 0 8pt 0;
+  padding-top: 6pt;
+  border-top: 3pt solid #b02f22;
+  break-after: avoid;
+}
+h3.sub {
+  font-size: 10.5pt;
+  font-weight: bold;
+  margin: 10pt 0 4pt 0;
+  break-after: avoid;
+}
+ul.lst { margin: 4pt 0 8pt 0; padding-left: 14pt; }
+ul.lst li { margin-bottom: 4pt; text-align: justify; hyphens: auto; }
+ol.lst { margin: 4pt 0 8pt 0; padding-left: 16pt; }
+ol.lst li { margin-bottom: 4pt; text-align: justify; hyphens: auto; }
+
+/* ============ Capa ============ */
+.cover { page: cover; }
+.masthead {
+  font-family: "Liberation Serif", serif;
+  font-size: 40pt;
+  font-weight: bold;
+  letter-spacing: -0.5pt;
+  margin: 10pt 0 0 0;
+  line-height: 44pt;
+}
+.masthead-rule { border-bottom: 1.6pt solid #000; margin-top: 4pt; }
+.cover-sub {
+  text-align: right;
+  font-family: "Liberation Sans", sans-serif;
+  font-size: 8pt;
+  color: #444;
+  margin-top: 3pt;
+}
+.cover-grid { margin-top: 64pt; width: 100%; border-collapse: collapse; }
+.cover-grid td { vertical-align: top; }
+.cover-left { width: 150pt; padding-right: 28pt; }
+.cover-summary {
+  border-top: 1pt solid #000;
+  padding-top: 24pt;
+  font-style: italic;
+  font-size: 9.5pt;
+  line-height: 13.5pt;
+  text-align: left;
+}
+.kicker {
+  font-family: "Liberation Serif", serif;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 10.5pt;
+  letter-spacing: 2.4pt;
+  margin-bottom: 5pt;
+}
+.kicker-rule { border-bottom: 4.5pt solid #b02f22; margin-bottom: 16pt; }
+.cover-title {
+  font-family: "Liberation Serif", serif;
+  font-size: 30pt;
+  font-weight: normal;
+  margin: 0 0 16pt 0;
+}
+.cover-byline { font-size: 11pt; margin-bottom: 4pt; text-align: left; }
+.cover-note {
+  margin-top: 260pt;
+  font-family: "Liberation Sans", sans-serif;
+  font-size: 7.4pt;
+  line-height: 10.6pt;
+  color: #333;
+  border-top: 0.7pt solid #000;
+  padding-top: 8pt;
+  text-align: left;
+}
+
+/* ============ Corpo ============ */
+.article { page: content; counter-reset: page 0; page-break-before: always; }
+.body2col { columns: 2; column-gap: 18pt; }
+.lead {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 11pt;
+  line-height: 15.5pt;
+  margin: 4pt 0 18pt 0;
+  text-align: left;
+}
+.pullquote {
+  break-inside: avoid;
+  font-family: "Liberation Sans", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 10.2pt;
+  line-height: 14.2pt;
+  color: #1a1a1a;
+  margin: 12pt 6pt 12pt 0;
+  padding-top: 8pt;
+  border-top: 3pt solid #b02f22;
+  text-align: left;
+}
+.keybox {
+  break-inside: avoid;
+  background: #f4efe9;
+  border-left: 3pt solid #b02f22;
+  padding: 8pt 10pt;
+  margin: 8pt 0 10pt 0;
+  font-size: 8.6pt;
+  line-height: 12pt;
+}
+.keybox .kb-title {
+  font-family: "Liberation Sans", sans-serif;
+  font-weight: bold;
+  font-size: 8.2pt;
+  letter-spacing: 1pt;
+  text-transform: uppercase;
+  color: #b02f22;
+  margin-bottom: 4pt;
+}
+.keybox p { margin-bottom: 4pt; }
+.keybox p:last-child { margin-bottom: 0; }
+
+/* ============ Quadros de página inteira ============ */
+.exhibit {
+  border-top: 2.2pt solid #000;
+  border-bottom: 1pt solid #000;
+  padding: 12pt 0;
+  margin: 16pt 0;
+}
+.exhibit h2 {
+  font-family: "Liberation Serif", serif;
+  font-size: 15pt;
+  font-weight: bold;
+  margin: 0 0 4pt 0;
+}
+.exhibit .ex-sub {
+  font-family: "Liberation Sans", sans-serif;
+  font-size: 7.8pt;
+  color: #444;
+  margin-bottom: 10pt;
+}
+table.cmp { width: 100%; border-collapse: collapse; }
+table.cmp th, table.cmp td {
+  font-family: "Liberation Sans", sans-serif;
+  font-size: 7.6pt;
+  line-height: 10.6pt;
+  vertical-align: top;
+  text-align: left;
+  padding: 5pt 8pt 5pt 0;
+  border-bottom: 0.5pt solid #999;
+}
+table.cmp th {
+  font-weight: bold;
+  border-bottom: 1pt solid #000;
+  font-size: 7.8pt;
+}
+table.cmp td.dim { font-weight: bold; width: 20%; }
+
+table.tl { width: 100%; border-collapse: collapse; }
+table.tl th, table.tl td {
+  font-family: "Liberation Sans", sans-serif;
+  font-size: 7.6pt;
+  line-height: 10.6pt;
+  vertical-align: top;
+  text-align: left;
+  padding: 4pt 8pt 4pt 0;
+  border-bottom: 0.5pt solid #bbb;
+}
+table.tl th { font-weight: bold; border-bottom: 1pt solid #000; }
+table.tl td.yr { font-weight: bold; width: 64pt; }
+
+/* ============ Diagrama de fluxo ============ */
+.flow { width: 240pt; margin: 10pt auto; }
+.fbox {
+  border: 0.8pt solid #000;
+  font-family: "Liberation Sans", sans-serif;
+  font-size: 7.4pt;
+  line-height: 9.6pt;
+  text-align: center;
+  padding: 5pt 4pt;
+}
+.farrow { text-align: center; font-size: 10pt; line-height: 11pt; padding: 1pt 0; }
+.ftop { width: 100%; border-collapse: separate; border-spacing: 5pt 0; }
+.ftop td { width: 33%; }
+
+/* ============ Glossário e revisão ============ */
+dl.gloss { margin: 4pt 0; }
+dl.gloss dt { font-weight: bold; margin-top: 6pt; }
+dl.gloss dd { margin: 1pt 0 0 0; text-align: justify; hyphens: auto; }
+.refbox {
+  margin-top: 14pt;
+  border-top: 0.7pt solid #000;
+  padding-top: 8pt;
+  font-size: 7.6pt;
+  line-height: 10.6pt;
+}
+.refbox p { text-align: left; margin-bottom: 4pt; }
+em.pub { font-style: italic; }
+</style>
+</head>
+<body>
+
+<!-- ==================== CAPA ==================== -->
+<div class="cover">
+  <div class="masthead">Guia de Estudo</div>
+  <div class="masthead-rule"></div>
+  <div class="cover-sub">Resumo interpretativo para estudo pessoal</div>
+
+  <table class="cover-grid">
+    <tr>
+      <td class="cover-left">
+        <div class="cover-summary">As empresas que chegaram à liderança global partiram de ambições muito maiores do que seus recursos. O que as levou ao topo não foi um plano perfeito, e sim uma obsessão por vencer, cultivada em todos os níveis da organização e sustentada por décadas.</div>
+      </td>
+      <td>
+        <div class="kicker">Baseado no clássico da HBR de 1989</div>
+        <div class="kicker-rule"></div>
+        <div class="cover-title">Intenção Estratégica</div>
+        <p class="cover-byline">Sobre o artigo "Strategic Intent",<br>de Gary Hamel e C.K. Prahalad</p>
+      </td>
+    </tr>
+  </table>
+
+  <div class="cover-note">
+    <b>Nota de uso:</b> este documento é um guia de estudo elaborado de forma independente. Ele resume, com palavras próprias, as ideias, os argumentos e os exemplos do artigo "Strategic Intent", de Gary Hamel e C.K. Prahalad, publicado originalmente na <em>Harvard Business Review</em> (maio–junho de 1989) e reimpresso na série "Best of HBR" (julho–agosto de 2005, R0507N). Não é uma tradução nem substitui a leitura do artigo original, cujos direitos pertencem à Harvard Business School Publishing. Destina-se exclusivamente ao estudo pessoal.
+  </div>
+</div>
+
+<!-- ==================== CORPO ==================== -->
+<div class="article">
+
+<div class="lead">Este guia percorre o artigo do início ao fim: o diagnóstico dos autores sobre o declínio competitivo do Ocidente, o conceito de intenção estratégica e seus atributos, os desafios corporativos, a responsabilidade recíproca, as quatro formas de inovação competitiva, o processo de rendição e a crítica às ferramentas tradicionais de estratégia. Ao final, você encontra os quadros comparativos, um glossário e perguntas de revisão.</div>
+
+<div class="body2col">
+
+<h2 class="section">1. O diagnóstico: imitar não revitaliza</h2>
+<p>O artigo abre com uma constatação: nos anos 1980, os gestores ocidentais corriam para copiar as vantagens dos novos rivais globais — produção transferida para países de mão de obra barata, linhas de produtos enxugadas em busca de escala, círculos de qualidade, produção <i>just-in-time</i>, práticas japonesas de gestão de pessoas e, quando nada disso bastava, alianças com os próprios concorrentes que haviam desequilibrado o jogo.</p>
+<p>Para Hamel e Prahalad, quase nada disso passava de imitação. Reproduzir vantagens de custo e qualidade que o rival já domina não devolve a liderança a ninguém: estratégias imitativas são transparentes para quem as inventou, e os concorrentes bem-sucedidos não ficam parados esperando. O resultado é a sensação, comum entre executivos da época, de viver um eterno jogo de alcançar o adversário — sempre surpreendidos pela conquista seguinte dos rivais.</p>
+<p>A tese central é mais provocadora: os próprios conceitos consagrados de estratégia teriam contribuído para o declínio. Noções como ajuste estratégico (adequar ambições aos recursos), estratégias genéricas (custo, diferenciação ou foco) e hierarquia da estratégia (metas, estratégias e táticas em cascata) levaram as empresas a encolher suas ambições até caberem nos recursos disponíveis. Os novos líderes globais partiram da lógica oposta.</p>
+
+<h2 class="section">2. A fotografia do carro em movimento</h2>
+<p>Por que o Ocidente não viu os japoneses chegando? Porque a análise tradicional da concorrência mede os recursos atuais do rival — pessoas, tecnologia, dinheiro — e considera ameaça apenas quem já tem força para roubar margem no próximo ciclo de planejamento. O que essa análise não mede é a <b>engenhosidade</b>: a velocidade com que o concorrente constrói vantagens novas.</p>
+<p>Os autores usam uma imagem que virou clássica: analisar recursos é tirar uma fotografia de um carro em movimento. A foto não diz a velocidade nem a direção — se o motorista passeia no domingo ou aquece os pneus para uma corrida.</p>
+<p>Os números da época ilustram o argumento. Por volta de 1970, a Komatsu tinha menos de 35% do faturamento da Caterpillar e dependia de uma linha só (pequenos tratores de esteira); a Honda era menor que a American Motors e nem exportava carros para os Estados Unidos; a Canon engatinhava na reprografia diante de uma Xerox de US$ 4 bilhões. Quinze anos depois, a Komatsu era uma empresa de US$ 2,8 bilhões com portfólio que ia de equipamentos de terraplenagem a robôs e semicondutores; a Honda produzia quase tantos carros quanto a Chrysler; a Canon havia emparelhado com a Xerox em participação mundial de unidades.</p>
+<p>A lição, resumida com uma referência a Sun Tzu: todos enxergam as táticas de quem vence; poucos enxergam a estratégia da qual a vitória nasce. Avaliar a vantagem tática de hoje não revela a determinação, a resistência nem a inventividade do concorrente de amanhã.</p>
+
+<h2 class="section">3. O que é intenção estratégica</h2>
+<p>As empresas que alcançaram a liderança global tinham ambições sem nenhuma proporção com seus recursos — e transformaram essa ambição em obsessão coletiva, mantida por dez ou vinte anos. É a isso que os autores dão o nome de <b>intenção estratégica</b>. Os exemplos emblemáticos: a Komatsu decidida a cercar a Caterpillar, a Canon determinada a bater a Xerox, a Honda sonhando em ser uma segunda Ford.</p>
+<p>Mas o conceito não se resume a ambição desmedida — muitas empresas ambiciosas fracassam. A intenção estratégica envolve um processo ativo de gestão, que inclui concentrar a atenção de todos na essência de vencer, motivar comunicando o valor da meta, abrir espaço para contribuições individuais e de equipe, renovar o entusiasmo com novas definições operacionais quando as circunstâncias mudam e usar a intenção como critério permanente de alocação de recursos.</p>
+
+<h3 class="sub">3.1 Captura a essência de vencer</h3>
+<p>A intenção define um alvo competitivo claro. O programa Apollo — chegar à Lua antes dos soviéticos — tinha exatamente esse caráter: era o placar da corrida tecnológica com a URSS. Quando não há um rival único para mirar, a intenção pode se ancorar em um tema: a NEC, nos anos 1970, decidiu adquirir as tecnologias que a colocariam na melhor posição para explorar a convergência entre computação e telecomunicações — outros previram a convergência, mas só a NEC fez dela o critério de todas as decisões estratégicas. A Coca-Cola formulou a sua como colocar o produto ao alcance do braço de todo consumidor do mundo.</p>
+
+<h3 class="sub">3.2 É estável no tempo</h3>
+<p>Batalhas por liderança global exigem alongar o horizonte de atenção da organização. A intenção dá consistência às ações de curto prazo e, ao mesmo tempo, admite reinterpretação conforme surgem oportunidades. Na Komatsu, o objetivo de cercar a Caterpillar se desdobrou numa sequência de programas de médio prazo: quando a rival a ameaçou no Japão, a resposta veio em ondas — primeiro qualidade, depois custo, depois exportação, depois novos produtos.</p>
+
+<h3 class="sub">3.3 Merece esforço e comprometimento pessoal</h3>
+<p>Pergunte a um CEO americano como ele mede sua contribuição e a resposta virá em riqueza para o acionista; numa empresa com intenção estratégica, a resposta vem em liderança global de mercado. As duas coisas andam juntas, mas não motivam igual: ninguém acorda cedo pensando em maximizar valor ao acionista — mas um desafio como "vencer a Benz", grito de guerra de uma montadora japonesa, muda o dia de um operário. Para os autores, a única meta digna de comprometimento é destronar o melhor do mundo ou seguir sendo o melhor.</p>
+
+<div class="pullquote">A pergunta que importa não é "em que o próximo ano será diferente?", e sim "o que faremos de diferente no próximo ano para chegar mais perto da nossa intenção estratégica?".</div>
+
+<h2 class="section">4. Intenção não é planejamento</h2>
+<p>O planejamento estratégico funciona como uma peneira de viabilidade: só passa a estratégia cujo "como" pode ser detalhado junto com o "o quê" — marcos claros, recursos garantidos, reação dos concorrentes prevista, mercado pesquisado. A ordem implícita aos gerentes é "seja realista".</p>
+<p>Só que liderança global não cabe nessa peneira. Komatsu, Canon e Honda não tinham planos de vinte anos para atacar o Ocidente, e japoneses não planejam melhor que ocidentais. A liderança global fica fora do alcance do planejamento — e empresas que só se comprometem com o planejável dificilmente chegam lá.</p>
+<p>Os autores acrescentam uma ironia: embora vendido como ferramenta de futuro, o plano estratégico costuma revelar mais os problemas de hoje que as oportunidades de amanhã. A cada ciclo os problemas mudam, o foco muda junto, e o horizonte de previsão encurta. O plano acaba projetando o presente adiante em pequenos passos. A intenção estratégica inverte o movimento: dobra o futuro de volta para o presente. Só com uma intenção articulada e respeitada uma sucessão de planos anuais soma liderança global.</p>
+<p>Também não se chega lá por acaso. Os autores descartam o intraempreendedorismo sem direção e as equipes isoladas de inovação (o modelo <i>skunkworks</i>) como caminho para a liderança: por trás desses programas mora a suposição derrotista de que a organização é tão engessada que só resta trancar meia dúzia de talentos numa sala, injetar dinheiro e torcer. Nesse arranjo, a cúpula só ajusta a estratégia depois que o sucesso emerge de baixo — e agrega pouco valor.</p>
+
+<h2 class="section">5. Fins claros, meios flexíveis</h2>
+<p>Nas empresas que superaram a escassez de recursos, a relação entre meios e fins é outra: a intenção é clara quanto ao destino e flexível quanto ao caminho, deixando espaço para improvisar. Alcançá-la exige enorme criatividade de meios — como as alianças que a Fujitsu costurou na Europa para atacar a IBM. Mas é criatividade a serviço de um fim prescrito: a cúpula define o critério pelo qual cada iniciativa pode ser testada de antemão, e os gerentes médios respondem não só pelas metas financeiras, mas pela direção implícita na intenção.</p>
+<p>Como a intenção cria um descompasso proposital entre recursos e ambições — as capacidades atuais não bastam, por definição —, a organização é forçada a ser mais inventiva com o que tem. A visão tradicional busca o ajuste entre recursos e oportunidades; a intenção estratégica cultiva o desajuste e desafia a empresa a fechá-lo construindo vantagens novas, uma a uma. Foi o roteiro da Canon contra a Xerox: entender as patentes da rival; licenciar tecnologia para ganhar experiência de mercado; investir em P&amp;D próprio; licenciar a própria tecnologia para financiar mais P&amp;D; entrar nos segmentos e países onde a Xerox era fraca.</p>
+
+<h2 class="section">6. Desafios corporativos: a maratona em tiros de 400 metros</h2>
+<p>Ninguém sabe como será o terreno no fim de uma maratona; o papel da cúpula é focar a organização nos próximos 400 metros. Na prática, isso significa apresentar uma sequência de <b>desafios corporativos</b>, cada um nomeando a próxima colina da corrida: num ano, qualidade; no outro, cuidado total com o cliente; depois, novos mercados; depois, renovar a linha de produtos. Os desafios escalonam a aquisição de vantagens e dão foco ao esforço de curto e médio prazo — específicos quanto ao fim (por exemplo, cortar em 75% o tempo de desenvolvimento de produtos), abertos quanto aos meios.</p>
+<p>O exemplo mais citado: para se antecipar à Xerox nas copiadoras pessoais, a Canon fixou aos engenheiros o preço-alvo de US$ 1.000 para uma copiadora doméstica — numa época em que sua máquina mais barata custava alguns milhares de dólares. Baratear os modelos existentes não daria o salto de preço-desempenho necessário; foi preciso reinventar o produto, trocando o complexo mecanismo de transferência de imagem por um cartucho descartável.</p>
+<p>Para que um desafio pegue, cada pessoa e equipe precisa entendê-lo e enxergar o que ele muda no próprio trabalho. A experiência de empresas como Ford e IBM com programas de qualidade mostra que engajar a organização inteira exige da cúpula cinco atitudes:</p>
+<ul class="lst">
+<li><b>Criar senso de urgência</b> (uma quase crise), amplificando os sinais fracos do ambiente em vez de esperar a crise real — a Komatsu, por exemplo, orçava com taxas de câmbio de pior cenário, que supervalorizavam o iene;</li>
+<li><b>Espalhar o foco no concorrente</b> por todos os níveis, com inteligência competitiva: cada funcionário deve poder comparar seu trabalho com o melhor rival — a Ford exibia à linha de produção vídeos da fábrica mais eficiente da Mazda;</li>
+<li><b>Treinar as pessoas</b> nas habilidades necessárias: ferramentas estatísticas, resolução de problemas, engenharia de valor, trabalho em equipe;</li>
+<li><b>Dar tempo de digerir um desafio antes do próximo</b> — quando as iniciativas se atropelam, a gerência média passa a proteger o time do vaivém de prioridades, e a atitude de "esperar para ver se é sério" corrói a credibilidade dos desafios;</li>
+<li><b>Fixar marcos e revisões</b>, garantindo que reconhecimento e recompensa reforcem o comportamento desejado, até o desafio ficar inescapável.</li>
+</ul>
+
+<h2 class="section">7. Responsabilidade recíproca: ganho e dor compartilhados</h2>
+<p>Qualquer que seja o desafio — qualidade, custo, engenharia de valor —, ele só cria raízes se cúpula e base sentirem responsabilidade mútua pela competitividade. E aqui os autores fazem uma crítica dura: em muitas empresas, os trabalhadores carregaram uma fatia desproporcional da culpa pelo fracasso competitivo.</p>
+<p>O caso narrado é revelador. Uma empresa americana exigiu 40% de concessão salarial dos horistas para alinhar custos com os rivais asiáticos; colheu uma greve longa e, no fim, 10% de concessão. Como o custo direto de mão de obra respondia por menos de 15% do valor agregado, a empresa desmoralizou toda a força operária em troca de 1,5% de economia total. A ironia: análises posteriores mostraram que a maior economia dos concorrentes vinha de métodos de trabalho inventados pelos próprios funcionários — exatamente o tipo de contribuição que os operários americanos, depois da greve, não tinham nenhuma vontade de dar. O contraponto é a Nissan diante do iene valorizado: a cúpula cortou primeiro o próprio salário e pediu sacrifício menor aos gerentes médios e à base.</p>
+<p>Pedir comprometimento com metas corporativas sem contrapartida — estabilidade, participação nos ganhos, voz na direção do negócio — é uma via de mão única que impede a empresa de aproveitar a inteligência dos seus funcionários.</p>
+
+<h2 class="section">8. Construir vantagens novas mais rápido que a imitação</h2>
+<p>A competitividade não depende do estoque de vantagens num dado momento, e sim do ritmo em que a empresa incorpora vantagens novas. Poucas vantagens duram: descobrir uma é como receber uma dica quente de ação na bolsa — quem age primeiro ganha mais. Quando a curva de experiência era novidade, construir capacidade antes dos rivais, baixar preço para encher a fábrica e cortar custo com o volume era ouro; deixou de ser quando vinte fabricantes de semicondutores passaram a construir, cada um, capacidade para 10% do mercado mundial.</p>
+<p>A essência da estratégia, dizem os autores, é criar as vantagens de amanhã mais depressa do que os concorrentes imitam as de hoje. A trajetória japonesa exemplifica: nos anos 1960, vantagem de custo de mão de obra e capital; quando o Ocidente também levou fábricas para fora, investimento acelerado em tecnologia de processo, gerando escala e qualidade; quando o Ocidente racionalizou a produção, aceleração do desenvolvimento de produtos; depois, marcas globais; depois, alianças e terceirização que esvaziaram as competências dos rivais. A moral: a capacidade de aprimorar habilidades existentes e aprender novas é a vantagem mais defensável que existe.</p>
+
+<div class="pullquote">Para o concorrente inteligente, a meta não é a imitação competitiva, e sim a inovação competitiva: a arte de manter os riscos da disputa em proporções administráveis.</div>
+
+<h2 class="section">9. As quatro abordagens da inovação competitiva</h2>
+<p>Quem persegue uma intenção estratégica quase sempre enfrenta rivais maiores e mais ricos; precisa, portanto, administrar os embates para poupar recursos escassos. Jogar melhor o mesmo jogo não basta — é preciso mudar o jogo em desfavor de quem já domina. A expansão global japonesa revela quatro táticas.</p>
+
+<h3 class="sub">9.1 Construir camadas de vantagem</h3>
+<p>Quanto mais amplo o portfólio de vantagens, menor o risco. A TV japonesa é o caso-modelo: maior produtor mundial de TVs em preto e branco em 1967, o Japão usou o custo baixo de mão de obra para dominar a fabricação de marca própria; investiu em fábricas de escala mundial, somando qualidade e confiabilidade ao custo; percebendo que vantagens de custo são vulneráveis (salários, câmbio, política comercial), passou os anos 1970 construindo canais e marcas — uma franquia global; no fim da década, ampliou produtos e negócios para amortizar esses investimentos, e em 1980 Matsushita, Sharp, Toshiba, Hitachi e Sanyo tinham conjuntos de negócios capazes de sustentar marketing global; na sequência, centros regionais de produção e design para adaptar produtos a cada mercado. As fontes de vantagem foram tratadas como camadas que se somam, não como escolhas que se excluem — buscar custo e diferenciação ao mesmo tempo, que alguns chamavam de suicídio competitivo, era justamente o objetivo.</p>
+
+<h3 class="sub">9.2 Procurar tijolos soltos</h3>
+<p>A segunda tática explora a surpresa: nos estágios iniciais da guerra por mercados globais, o entrante trabalha para ficar abaixo do limiar de resposta do gigante, ocupando território mal defendido. O artigo conta que, numa multinacional americana, três gerentes nacionais descreveram o mesmo concorrente japonês de três formas: um o via atacando o segmento de entrada, outro admirava seus produtos de topo de linha, o terceiro havia recebido uma proposta vantajosa de fornecimento de componentes. Em cada país, o rival encontrara um tijolo solto diferente.</p>
+<p>A busca começa pela sabedoria convencional do concorrente: como ele define o mercado que atende? Quais atividades considera lucrativas? Quais regiões acha problemáticas demais? O objetivo não é achar um nicho onde o grande não pisa, e sim montar uma base de ataque logo fora do território que o líder ocupa — um santuário de lucro sem contestação, que pode ser um segmento de produto (motos de entrada), uma fatia da cadeia de valor (componentes de computador) ou uma geografia (Europa Oriental).</p>
+<p>A Honda fez exatamente isso nas motocicletas: entrou por produtos fora da definição de mercado dos líderes, construiu ali sua base e expandiu o ataque. O que os rivais não viram foi a intenção estratégica e a competência crescente em motores e trens de força: enquanto vendia motos de 50 cc nos Estados Unidos, a Honda já corria com motos grandes na Europa, acumulando o design e a tecnologia para se espalhar por tudo que dependesse de motor — carros, cortadores de grama, motores marítimos, geradores. Cada empresa, presa ao próprio mercado, deixou passar a diversificação horizontal. Defender os tijolos soltos exige visão periférica: rastrear e antecipar a migração dos rivais globais por segmentos, negócios, países, elos da cadeia e canais.</p>
+
+<h3 class="sub">9.3 Mudar os termos do engajamento</h3>
+<p>A terceira tática é recusar a definição de setor e de segmento imposta pelo líder. Nos anos 1970, Kodak e IBM tentaram copiar o sistema de negócios da Xerox — segmentação, produtos, distribuição, assistência, preço — e a Xerox decodificou os ataques sem dificuldade: a IBM saiu do ramo; a Kodak ficou num distante segundo lugar. A Canon escolheu outro caminho: padronizou máquinas e componentes para cortar custo; distribuiu por revendedores de material de escritório em vez de replicar a força de vendas direta; projetou confiabilidade e facilidade de manutenção no produto e delegou a assistência aos revendedores; vendeu em vez de alugar, livrando-se de financiar a base de leasing; e mirou secretárias e gerentes de departamento em vez do chefe da reprografia. Cada decisão contornou uma barreira de entrada.</p>
+<p>Daí vem uma distinção importante: <b>barreira de entrada não é barreira de imitação</b>. Quem imita o sistema do líder paga o custo de entrada inteiro; a Canon derrubou o custo mudando as regras. E a mudança de regras ainda paralisou a reação da Xerox: acelerar a redução da linha, os novos canais e a confiabilidade significava corroer a própria base de lucros. As forças da líder — vendas diretas, rede de assistência, base de máquinas alugadas, receita de serviços — viraram barreiras à retaliação. A imagem dos autores: inovação competitiva é judô — usa-se o peso do maior contra ele, desenvolvendo capacidades contrastantes, não equivalentes. O rival estabelecido é refém da própria receita de sucesso; a arma do entrante é a folha em branco.</p>
+
+<h3 class="sub">9.4 Competir por colaboração</h3>
+<p>Por fim, licenças, terceirização e joint ventures permitem, às vezes, vencer sem lutar. As alianças da Fujitsu com a Siemens e a STC na Europa e com a Amdahl nos Estados Unidos renderam volume de produção e acesso a mercados ocidentais; a Matsushita, associada a Thorn, Telefunken e Thomson, multiplicou as forças contra a Philips na disputa pelo videocassete europeu — a máxima é antiga: o inimigo do meu inimigo é meu amigo.</p>
+<p>A colaboração também serve para sequestrar o desenvolvimento do rival: na guerra da eletrônica de consumo, os japoneses atacaram os negócios tradicionais (TVs, aparelhos de som) e se ofereceram para fabricar os produtos da geração seguinte — videocassetes, filmadoras, CD players — para os ocidentais. A aposta era que os rivais cortariam o próprio investimento em desenvolvimento; foi o que aconteceu, e quem abandonou o desenvolvimento raramente voltou a ser concorrente sério. E serve ainda para calibrar o adversário: as joint ventures da Toyota com a GM e da Mazda com a Ford deram às japonesas um posto de observação sobre o progresso dos americanos em custo, qualidade e tecnologia — e sobre quando eles brigam e quando não brigam. A recíproca, notam os autores, é verdadeira.</p>
+
+<div class="keybox">
+  <div class="kb-title">Síntese do modelo</div>
+  <p>A revitalização competitiva combina três horizontes: a <b>intenção estratégica</b> garante consistência na alocação de recursos no longo prazo; os <b>desafios corporativos</b> focam o esforço no médio prazo; a <b>inovação competitiva</b> reduz o risco no curto prazo. Consistência, foco e inventividade são a chave para alavancar recursos limitados atrás de metas ambiciosas.</p>
+</div>
+
+<h2 class="section">10. O processo de rendição</h2>
+<p>Assim como existe um processo de vitória, existe um processo de rendição — e ele se repetiu, com semelhança notável, em setor após setor. O encadeamento aparece no quadro do artigo (reproduzido adiante em fluxo):</p>
+<ol class="lst">
+<li><b>Intenção não percebida:</b> sem metas de longo prazo focadas em concorrentes, as empresas ocidentais não atribuíam essas intenções aos rivais;</li>
+<li><b>Engenhosidade subestimada:</b> a ameaça era medida pelos recursos existentes, não pela velocidade de aprendizado — e os rivais menores ganhavam tecnologia por licenças, entendiam o mercado pelos parceiros OEM e melhoravam qualidade e produtividade com o envolvimento de todos os funcionários;</li>
+<li><b>Táticas de entrada não convencionais:</b> ataques pela periferia (Honda em motos pequenas, Yamaha em pianos de cauda, Toshiba em TVs pequenas em preto e branco), participações minoritárias em países em desenvolvimento, canais alternativos, publicidade corporativa intensa — tudo lido como excentricidade ou estratégia de nicho;</li>
+<li><b>Surpresa competitiva</b>, seguida de <b>resposta parcial</b>: acreditando que japoneses e coreanos competiam só em custo e qualidade, o Ocidente respondia com produção no exterior, terceirização ou um programa de qualidade — sem enxergar as camadas de vantagem, a expansão por segmentos vizinhos e as marcas globais em construção;</li>
+<li><b>Armadilha do atraso, batalhas perdidas, sensação de inevitabilidade, retirada:</b> imitando as táticas visíveis do rival, as empresas entraram num eterno correr atrás; uma a uma, perderam batalhas e passaram a tratar a rendição como inevitável.</li>
+</ol>
+<p>Dois exemplos do quadro: executivos diziam que os japoneses não existiam no setor europeu de computadores — quase verdade em participação de marca, mas eles já controlavam cerca de um terço do valor agregado de manufatura do hardware vendido na Europa; e os fabricantes alemães de automóveis diziam não se preocupar com a subida de mercado dos japoneses — até a Porsche anunciar que deixaria de fazer carros de entrada, espremidos pela concorrência. A rendição nunca foi inevitável, concluem os autores: o ataque é que foi encenado para esconder as intenções finais e evitar o confronto direto.</p>
+
+<h2 class="section">11. Por que o Ocidente se rendeu: a crítica às ferramentas</h2>
+<p>Se tinham liderança tecnológica e mercados enormes, como Estados Unidos e Europa perderam o que parecia ser um direito de nascença? Poucas empresas documentam o próprio fracasso ou procuram nas próprias ortodoxias as sementes da rendição. Os autores listam essas sementes:</p>
+
+<h3 class="sub">11.1 Receitas de estratégia</h3>
+<p>É desconfortável pensar que o pensamento estratégico ocidental caiba em oito regras de excelência, sete "S", cinco forças, quatro estágios de ciclo de vida, três estratégias genéricas e incontáveis matrizes dois por dois. Vinte anos de "avanços" produziram tipologias e listas com base empírica duvidosa, e até os conceitos razoáveis — ciclo de vida, curva de experiência, portfólio, estratégias genéricas — têm efeitos colaterais tóxicos: reduzem as opções consideradas, criam preferência por vender negócios em vez de defendê-los e geram estratégias previsíveis, fáceis de decodificar. Uma empresa pode ter quarenta negócios e só quatro estratégias: investir, manter, colher, sair. E testar opções pelo encaixe na estrutura atual do setor é jogar pelas regras do líder — geralmente, suicídio competitivo.</p>
+<p>Daqui sai outra das frases fortes do artigo: enquanto os gestores ocidentais, munidos de segmentação, cadeia de valor, benchmarking e grupos estratégicos, ficavam cada vez melhores em desenhar mapas do setor, os concorrentes moviam continentes inteiros. O objetivo do estrategista não é achar um nicho no espaço existente, e sim criar um espaço novo, talhado para as forças da própria empresa — um espaço fora do mapa. Isso vale ainda mais quando as fronteiras setoriais derretem (serviços financeiros, comunicações): habilidade cartográfica vale pouco no epicentro de um terremoto, mas um setor em convulsão é a chance de redesenhar o mapa a seu favor.</p>
+
+<h3 class="sub">11.2 O mito da maturidade</h3>
+<p>"Maduro" e "em declínio" são, em grande parte, questão de definição: o que o executivo chama de negócio maduro costuma ser a estagnação das vendas dos produtos atuais, nos canais atuais, nos mercados atuais — maduro está o conceito que ele faz do setor. Perguntado se o negócio de pianos estava maduro, um executivo da Yamaha respondeu que só se a empresa não pudesse mais tomar participação de ninguém em lugar nenhum do mundo ainda ganhando dinheiro — e que, de todo modo, a Yamaha não estava no negócio de pianos, e sim no de teclados. A Sony revitalizou ano após ano os negócios de rádios e gravadores que os outros davam por encerrados. Já RCA e GE, achando a eletrônica de consumo madura ("o que poderia superar a TV em cores?") e distraídas por setores mais atraentes como computadores de grande porte, entregaram aos japoneses o quase monopólio de videocassetes, filmadoras e CD players. E a TV, dada como madura, estava à beira de um renascimento: a alta definição criaria um negócio de US$ 20 bilhões por ano nos Estados Unidos — do qual os pioneiros da televisão capturariam pouco.</p>
+
+<h3 class="sub">11.3 Foco doméstico e portfólio</h3>
+<p>A maioria das ferramentas de análise olha para dentro do país. O planejamento de portfólio trata as opções de investimento como um leque de negócios, não de mercados geográficos: atacada por estrangeiros, a empresa vende o negócio e migra para outro onde a competição global ainda não chegou — cada vez restam menos refúgios. Raramente alguém pergunta se dá para entrar nos mercados emergentes antes dos rivais, ou contra-atacar no mercado doméstico deles para frear sua expansão. Um executivo de uma empresa global vencedora resumiu com ironia: é ótimo encontrar um concorrente gerido pelo conceito de portfólio — dá quase para prever quanta participação é preciso tomar para o negócio entrar na lista de venda do CEO.</p>
+
+<h3 class="sub">11.4 UENs, marcas globais e competências essenciais</h3>
+<p>A descentralização em unidades estratégicas de negócios seduz porque cobra o resultado do gerente de linha — presume-se que cada unidade tenha todos os recursos de que precisa, e nesse ambiente sem desculpas é difícil responsabilizar a cúpula. Mas a revitalização exige valor agregado de cima. Investir numa franquia global de marca ultrapassa os recursos e o apetite de risco de uma unidade isolada: é difícil citar uma empresa americana ou europeia que tenha criado uma marca global nova nos dez ou quinze anos anteriores ao artigo, enquanto as japonesas criaram dezenas — NEC, Fujitsu, Panasonic, Toshiba, Sony, Seiko, Epson, Canon, Minolta, Honda. A GE é o caso típico: sem esforço coordenado, cada negócio com ambição internacional tinha de bancar sozinho sua credibilidade lá fora — e alguns desistiram. Na direção oposta, as coreanas Samsung, Daewoo e Lucky-Goldstar construíam guarda-chuvas de marca para facilitar a entrada de toda uma família de negócios. O princípio: <b>economias de escopo podem valer tanto quanto economias de escala</b> — e capturá-las exige coordenação entre negócios que só a cúpula pode fazer.</p>
+<p>A rigidez das UENs também desqualifica a empresa. Uma unidade sozinha não sustenta o investimento numa competência essencial (semicondutores, mídia óptica, motores a combustão); a saída é comprar componentes-chave — muitas vezes do futuro concorrente. Para a UEN definida por produto-mercado, competitividade é produto final competitivo em preço e desempenho, e nada incentiva o gerente a distinguir o fornecimento externo, que dá competitividade embutida no produto, do desenvolvimento interno, que cria competências exploráveis por vários negócios. Quando a fabricação de componentes é tratada como centro de custo, investir na competência parece pior negócio do que investir na ponta — e a contabilidade interna não captura o valor competitivo de reter o controle. Nas japonesas, marca global compartilhada e competência essencial compartilhada funcionam como argamassa; sem argamassa, os negócios da empresa são tijolos soltos, fáceis de derrubar, e o rival que investe em competências coopta o concorrente doméstico para uma dependência de fornecimento de longo prazo.</p>
+
+<h3 class="sub">11.5 Gestão pelo denominador e o gerente "pino móvel"</h3>
+<p>Recompensar o gerente de unidade só pelo retorno sobre o investimento produz <b>gestão pelo denominador</b>: cortar investimento e pessoal melhora o índice mais depressa do que crescer receita. Vem junto uma sensibilidade exagerada às retrações do setor — quem corta rápido demora muito mais para recuperar habilidades e investimentos na retomada, e perde participação a cada ciclo. Onde a disputa por talentos é feroz e os rivais investem sem parar, isso cria uma catraca de encolhimento.</p>
+<p>O problema se agrava com a ideia do gerente-geral como peça móvel, capaz de administrar qualquer negócio com valor presente líquido numa mão e portfólio na outra — noção que as escolas de administração ajudaram a perpetuar. Em muitas empresas diversificadas, a cúpula avalia os gerentes só pelos números porque não existe outra base de diálogo: trocando de cargo a cada rodada do "desenvolvimento de carreira", eles não aprendem as nuances do negócio. No exemplo da GE, um executivo em ascensão passou por cinco negócios em cinco anos — e sua sequência de vitórias rápidas acabou diante de um rival japonês cujos gestores estavam no mesmo negócio havia mais de uma década. Sem conhecimento profundo, a conversa gravita para os números; o gestor com mandato de dois ou três anos ou não se compromete com nada além do seu horizonte, ou espreme metas ambiciosas num prazo irreal — aquisições sem integração, iniciativas em excesso, alianças sem atenção às consequências competitivas. Querer ser o número um é a essência da intenção estratégica; impor três ou quatro anos a essa busca é convite ao desastre.</p>
+
+<h3 class="sub">11.6 A hierarquia da estratégia e o elitismo</h3>
+<p>Quase toda teoria de gestão estratégica supõe uma hierarquia: metas corporativas guiam estratégias de unidades, que guiam táticas funcionais; a cúpula formula, a base executa. Essa dicotomia alimenta uma visão elitista que desliga a maior parte da organização: os funcionários não se identificam com as metas nem se envolvem no trabalho de tornar a empresa competitiva. Contribuem para o elitismo os mitos em torno dos grandes executivos — Iacocca salvou a Chrysler, De Benedetti salvou a Olivetti, Sculley virou a Apple — e o ambiente turbulento: o gerente médio, atropelado por circunstâncias que não controla, quer acreditar que a cúpula tem todas as respostas, e a cúpula não admite que não tem, com medo de desmoralizar a base.</p>
+<p>O resultado é um código de silêncio: a real dimensão do problema competitivo não circula. Os autores entrevistaram gerentes angustiados porque a direção não falava abertamente dos desafios — e que, perguntados se eram transparentes com as próprias equipes, respondiam que o pessoal abaixo deles não aguentaria a verdade. A base só ouvia falar de competitividade na negociação salarial, quando o problema servia para extrair concessões. Uma ameaça que todos percebem e ninguém nomeia gera mais ansiedade do que uma ameaça identificada e transformada em ponto focal do esforço de toda a empresa — por isso honestidade e humildade da cúpula são o primeiro pré-requisito da revitalização.</p>
+<p>Na mesma linha, programas de participação (círculos de qualidade, atendimento total) fracassam quando a gestão acha que basta estrutura administrativa: a dificuldade é atribuída a "problemas de comunicação" descendente, ignorando a comunicação de baixo para cima. As japonesas vencem não por terem gestores mais inteligentes, mas por aproveitarem a "sabedoria do formigueiro". A imagem final: os altos executivos são como os astronautas do ônibus espacial — levam a glória, mas todo mundo sabe que a inteligência da missão está no controle em terra.</p>
+<p>Estratégia formulada por elite também dificilmente é criativa: os departamentos de planejamento têm poucas cabeças para desafiar a sabedoria convencional, e o ritual anual parte sempre da estratégia do ano anterior, com melhorias incrementais nos mesmos segmentos e territórios. A entrada pioneira da Canon nas copiadoras pessoais nasceu numa subsidiária de vendas no exterior — não entre os planejadores no Japão. O objetivo da hierarquia (consistência entre níveis) continua válido, mas a consistência deve vir da intenção estratégica compartilhada, não de planos impostos de cima; o desafio dos anos 1990, anteciparam os autores, seria dar aos funcionários o poder de inventar os meios para fins ambiciosos.</p>
+
+<h2 class="section">12. Conclusão: coragem para metas heroicas</h2>
+<p>Entre as empresas que vieram de trás para disputar a liderança global, os autores raramente encontraram administradores cautelosos no comando; nas que se renderam, invariavelmente encontraram cúpulas sem coragem de assumir metas heroicas — além do alcance do planejamento e dos recursos existentes. Metas conservadoras não geram pressão nem entusiasmo pela inovação competitiva; metas financeiras e declarações de missão vagas não dão direção consistente para vencer uma guerra global.</p>
+<p>Culpar o mercado financeiro não cola: o suposto imediatismo dos investidores reflete, na maior parte dos casos, a falta de confiança na capacidade dos executivos de conceber e entregar metas ousadas. O artigo cita o presidente de conselho que, mesmo elevando o retorno sobre o capital acima de 40% à custa de desinvestimentos e cortes, viu a empresa presa a um múltiplo preço/lucro de 8 — o recado do mercado era que cortar gordura e administrar denominadores qualquer um faz, e que talvez outra empresa usasse aqueles recursos com mais criatividade. Investidores não são irremediavelmente imediatistas; são justificadamente céticos.</p>
+<p>A cautela da cúpula, no fundo, é falta de confiança na própria capacidade de envolver a organização inteira na revitalização — em vez de apenas subir as metas financeiras. Desenvolver fé na organização, motivá-la a entregar metas difíceis e manter o foco até internalizar capacidades novas: esse é o verdadeiro desafio da alta administração. Só quem se ergue à altura dele ganha a coragem de comprometer a si e à empresa com a liderança global.</p>
+
+</div><!-- /body2col -->
+
+<!-- ==================== QUADRO 1 ==================== -->
+<div class="exhibit">
+  <h2>Quadro 1 — Dois modelos de estratégia ("Refazendo a Estratégia")</h2>
+  <div class="ex-sub">Síntese do quadro em que os autores comparam, ponto a ponto, o modelo dominante no Ocidente (ajuste estratégico) e o modelo dos novos líderes globais (alavancagem de recursos). Os dois não se excluem; a diferença de ênfase é que define como as batalhas se desenrolam.</div>
+  <table class="cmp">
+    <tr>
+      <th style="width:20%;">Dimensão</th>
+      <th style="width:40%;">Modelo 1 — Ajuste estratégico</th>
+      <th style="width:40%;">Modelo 2 — Alavancagem de recursos</th>
+    </tr>
+    <tr>
+      <td class="dim">Recursos limitados em ambiente hostil</td>
+      <td>Reduzir as ambições até caberem nos recursos disponíveis.</td>
+      <td>Alavancar os recursos para alcançar metas aparentemente inatingíveis.</td>
+    </tr>
+    <tr>
+      <td class="dim">Vantagem competitiva</td>
+      <td>Buscar vantagens inerentemente sustentáveis.</td>
+      <td>Acelerar o aprendizado organizacional para criar vantagens novas antes dos rivais.</td>
+    </tr>
+    <tr>
+      <td class="dim">Concorrentes maiores</td>
+      <td>Procurar nichos — ou desistir de desafiar o incumbente.</td>
+      <td>Procurar regras novas que desvalorizem as vantagens do incumbente.</td>
+    </tr>
+    <tr>
+      <td class="dim">Redução de risco</td>
+      <td>Equilíbrio financeiro: portfólio de negócios geradores e consumidores de caixa.</td>
+      <td>Equilíbrio competitivo: portfólio amplo e balanceado de vantagens.</td>
+    </tr>
+    <tr>
+      <td class="dim">Alocação de investimento</td>
+      <td>Por unidades de produto-mercado; cada negócio supostamente detém as habilidades de que precisa.</td>
+      <td>Também em competências essenciais (por exemplo, controles por microprocessador, imagem eletrônica), acompanhadas entre os negócios pela cúpula.</td>
+    </tr>
+    <tr>
+      <td class="dim">Consistência entre níveis</td>
+      <td>Conformidade com objetivos financeiros; meios restringidos por procedimentos padronizados, mercado definido e práticas aceitas do setor.</td>
+      <td>Lealdade à intenção estratégica e a desafios de médio prazo, com a base encorajada a inventar os meios.</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ==================== QUADRO 2 ==================== -->
+<div class="exhibit">
+  <h2>Quadro 2 — A construção de vantagens na Komatsu</h2>
+  <div class="ex-sub">Linha do tempo dos desafios corporativos e programas citados no artigo, mostrando como a intenção de "cercar a Caterpillar" foi escalonada em etapas concretas ao longo de vinte anos.</div>
+  <table class="tl">
+    <tr><th style="width:64pt;">Período</th><th style="width:34%;">Desafio corporativo</th><th>Programas e iniciativas</th></tr>
+    <tr>
+      <td class="yr">Início dos anos 1960</td>
+      <td>Proteger o mercado doméstico contra a Caterpillar</td>
+      <td>Acordos de licenciamento (Cummins Engine, International Harvester, Bucyrus-Erie) para absorver tecnologia e criar referenciais de comparação.</td>
+    </tr>
+    <tr>
+      <td class="yr">1961–1962</td>
+      <td>Qualidade acima da rival</td>
+      <td>Projeto A, para elevar a qualidade dos tratores pequenos e médios acima da Caterpillar; círculos de qualidade com treinamento para todos os funcionários.</td>
+    </tr>
+    <tr>
+      <td class="yr">1965–1966</td>
+      <td>Reduzir custos mantendo a qualidade</td>
+      <td>Programa de redução de custos (CD) e, no ano seguinte, sua versão ampliada para a empresa toda (CD Total).</td>
+    </tr>
+    <tr>
+      <td class="yr">1967–1974</td>
+      <td>Internacionalizar e construir mercados de exportação</td>
+      <td>Subsidiárias Komatsu Europe (1967) e Komatsu America (1970); projetos B, C e D para melhorar tratores grandes, pás-carregadeiras e escavadeiras hidráulicas; departamentos de pré-venda e assistência para países em industrialização (1974); desenvolvimento dos países do bloco oriental desde o início da década de 1960.</td>
+    </tr>
+    <tr>
+      <td class="yr">1975–1979</td>
+      <td>Responder a choques externos</td>
+      <td>Programa V-10 (custos 10% menores com a mesma qualidade, 20% menos peças, produção racionalizada); programa ¥180, orçando toda a empresa a 180 ienes por dólar quando o câmbio estava em 240; Projeto E, redobrando esforços de custo e qualidade em resposta à crise do petróleo.</td>
+    </tr>
+    <tr>
+      <td class="yr">Fim dos anos 1970 a 1981</td>
+      <td>Criar novos produtos e mercados</td>
+      <td>Aceleração do desenvolvimento para ampliar a linha; programa Futuro e Fronteiras, identificando negócios novos a partir das necessidades da sociedade e do know-how da empresa (1979); programa EPOCHS, conciliando maior variedade de produtos com eficiência de produção (1981).</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ==================== QUADRO 3 ==================== -->
+<div class="exhibit">
+  <h2>Quadro 3 — O processo de rendição</h2>
+  <div class="ex-sub">O padrão de ataque e recuo observado pelos autores nas duas décadas anteriores ao artigo, comum a vários setores.</div>
+  <div class="flow">
+    <table class="ftop">
+      <tr>
+        <td class="fbox">Intenção estratégica não percebida</td>
+        <td class="fbox">Engenhosidade subestimada</td>
+        <td class="fbox">Táticas de entrada não convencionais</td>
+      </tr>
+    </table>
+    <div class="farrow">&#8595;</div>
+    <div class="fbox">Surpresa competitiva</div>
+    <div class="farrow">&#8595;</div>
+    <div class="fbox">Resposta parcial (só custo e qualidade)</div>
+    <div class="farrow">&#8595;</div>
+    <div class="fbox">Armadilha do eterno correr atrás</div>
+    <div class="farrow">&#8595;</div>
+    <div class="fbox">Batalhas perdidas</div>
+    <div class="farrow">&#8595;</div>
+    <div class="fbox">Sensação de inevitabilidade</div>
+    <div class="farrow">&#8595;</div>
+    <div class="fbox">Retirada e saída do negócio</div>
+  </div>
+</div>
+
+<!-- ==================== GLOSSÁRIO ==================== -->
+<div class="body2col">
+
+<h2 class="section">Glossário de conceitos-chave</h2>
+<dl class="gloss">
+  <dt>Intenção estratégica</dt>
+  <dd>Obsessão por vencer, sustentada por décadas em todos os níveis da organização; vislumbra a posição de liderança desejada e define o critério pelo qual o progresso será medido. Clara quanto aos fins, flexível quanto aos meios.</dd>
+  <dt>Ajuste estratégico</dt>
+  <dd>Adequação entre recursos e oportunidades; para os autores, quando vira dogma, leva a empresa a encolher as ambições até caberem nos recursos.</dd>
+  <dt>Alavancagem de recursos</dt>
+  <dd>Multiplicar o efeito de recursos escassos acelerando o aprendizado organizacional, em vez de limitar as metas ao que os recursos permitem hoje.</dd>
+  <dt>Engenhosidade (resourcefulness)</dt>
+  <dd>Ritmo em que uma empresa constrói vantagens novas; variável que a análise tradicional da concorrência ignora.</dd>
+  <dt>Desafio corporativo</dt>
+  <dd>Etapa de médio prazo da intenção estratégica — a "próxima colina" da corrida; específico quanto ao fim, aberto quanto aos meios.</dd>
+  <dt>Responsabilidade recíproca</dt>
+  <dd>Ganho e dor compartilhados entre cúpula e base; condição para que os funcionários se engajem na competitividade.</dd>
+  <dt>Inovação competitiva</dt>
+  <dd>Mudar o jogo em desfavor do incumbente, em vez de imitá-lo; a arte de manter os riscos da disputa em proporções administráveis.</dd>
+  <dt>Camadas de vantagem</dt>
+  <dd>Acúmulo progressivo de vantagens (custo, escala, qualidade, canais, marca, presença regional) tratadas como complementares, não excludentes.</dd>
+  <dt>Tijolos soltos</dt>
+  <dd>Pontos mal defendidos do território do líder — um segmento, um elo da cadeia de valor, uma geografia — usados como base de ataque.</dd>
+  <dt>Termos do engajamento</dt>
+  <dd>As regras da disputa (segmentação, canais, modelo de receita); mudá-las derruba barreiras de entrada e transforma as forças do líder em barreiras à retaliação.</dd>
+  <dt>Barreira de entrada × barreira de imitação</dt>
+  <dd>Quem copia o sistema do líder paga o custo de entrada inteiro; quem muda as regras entra pagando muito menos.</dd>
+  <dt>Competência essencial</dt>
+  <dd>Capacidade profundamente enraizada (por exemplo, motores, imagem eletrônica) explorável por vários negócios; junto com a marca global, é a "argamassa" que une a empresa.</dd>
+  <dt>Gestão pelo denominador</dt>
+  <dd>Melhorar índices de retorno cortando investimento e pessoal (o denominador) em vez de crescer a receita (o numerador).</dd>
+  <dt>Hierarquia da estratégia</dt>
+  <dd>Modelo em que a cúpula formula e a base executa; para os autores, alimenta o elitismo e desliga a organização da competitividade.</dd>
+  <dt>Processo de rendição</dt>
+  <dd>Encadeamento que vai da intenção não percebida do rival à retirada do negócio, passando pela surpresa, pela resposta parcial e pela armadilha do atraso.</dd>
+</dl>
+
+<h2 class="section">Perguntas de revisão</h2>
+<ol class="lst">
+<li>Por que estratégias baseadas em imitação não levam à revitalização competitiva?</li>
+<li>O que a metáfora da "fotografia do carro em movimento" diz sobre a análise tradicional da concorrência?</li>
+<li>Quais são os três atributos da intenção estratégica e que exemplos o artigo dá de cada um?</li>
+<li>Em que sentido o planejamento estratégico funciona como uma "peneira de viabilidade", e por que a liderança global não passa por ela?</li>
+<li>Como a Canon usou o desafio da copiadora de US$ 1.000 para se antecipar à Xerox? O que isso ilustra sobre fins e meios?</li>
+<li>Quais são as cinco atitudes da alta administração para engajar a organização em um desafio corporativo?</li>
+<li>O que o caso da concessão salarial de 40% ensina sobre responsabilidade recíproca? Como a Nissan agiu de forma diferente?</li>
+<li>Descreva as quatro abordagens da inovação competitiva com um exemplo de cada.</li>
+<li>Reconstrua o processo de rendição etapa por etapa. Por que os autores dizem que a rendição não era inevitável?</li>
+<li>Quais os perigos da organização por UENs, da gestão pelo denominador e do gerente "pino móvel"?</li>
+<li>Por que os autores dizem que os investidores não são imediatistas, e sim "justificadamente céticos"?</li>
+<li>Qual é, na conclusão do artigo, o verdadeiro desafio da alta administração?</li>
+</ol>
+
+<div class="refbox">
+  <p><b>Referência do artigo original:</b> HAMEL, Gary; PRAHALAD, C.K. Strategic Intent. <em class="pub">Harvard Business Review</em>, v. 67, n. 3, p. 63–76, maio–junho 1989. Reimpresso na série "Best of HBR", <em class="pub">Harvard Business Review</em>, julho–agosto 2005 (reimpressão R0507N).</p>
+  <p><b>Notas do artigo (referências citadas pelos autores):</b> os autores remetem, entre outros, a H. Igor Ansoff (<em class="pub">Corporate Strategy</em>, 1965) e Kenneth R. Andrews (<em class="pub">The Concept of Corporate Strategy</em>, 1971) como pioneiros do conceito de estratégia na gestão; a Robert A. Burgelman (<em class="pub">Administrative Science Quarterly</em>, 1983) sobre empreendimento corporativo interno; a Michael E. Porter (<em class="pub">Competitive Strategy</em>, 1980) sobre estratégias genéricas; a Hofer e Schendel (<em class="pub">Strategy Formulation</em>, 1978) sobre alocação de recursos; e a Lorange e Vancil (<em class="pub">Strategic Planning Systems</em>, 1977) sobre sistemas de planejamento.</p>
+  <p><b>Leituras complementares sugeridas na edição OnPoint:</b> "Competing for the Future" (Hamel &amp; Prahalad, HBR, jul.–ago. 1994); "Transforming Corner-Office Strategy into Frontline Action" (Gadiesh &amp; Gilbert, HBR, maio 2001); "How to Have an Honest Conversation About Your Business Strategy" (Beer &amp; Eisenstat, HBR, fev. 2004).</p>
+</div>
+
+</div><!-- /body2col -->
+</div><!-- /article -->
+
+</body>
+</html>
